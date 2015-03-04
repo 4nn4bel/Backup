@@ -6,5 +6,6 @@ category enum ('Trip', 'Equipment') not null,
 sub_category enum('Malaysia', 'Thailand', 'Indonesia','Breathable', 'Wearable', 'Accessories', 'Others' ) not null, 
 last_update_by varchar(60),
 last_update_time timestamp not null default current_timestamp on update current_timestamp, 
-primary key (log_id, user_id)
+primary key (log_id), 
+key(user_id)
 )engine = InnoDB; 
